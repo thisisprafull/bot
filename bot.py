@@ -96,7 +96,7 @@ async def home(client, message):
 fghfghfhfhh tinku</b>""",
         reply_markup=reply_markup,
         parse_mode="html",
-        reply_to_message_id=message.message_id
+        reply_to_message_id=Message.id
     )
 
 @Tgraph.on_message(filters.command(["help"]))
@@ -118,7 +118,7 @@ Just Send Me A Video/gif/photo Upto 5mb.
 i'll upload ut to telegra.ph and give you the direct link""",
         reply_markup=reply_markup,
         parse_mode="html",
-        reply_to_message_id=message.message_id
+        reply_to_message_id=Message.id
     )                           
 @Tgraph.on_callback_query()
 async def button(Tgraph, update):
